@@ -8,7 +8,9 @@ class Controls {
         this.#addKeyboardListeners();
     }
 
+    // The # in front of a function means that it is a private function
     #addKeyboardListeners() {
+        // Event listeners for a keyboard press
         document.onkeydown = (event) => {
             switch (event.key) {
                 case "ArrowLeft":
@@ -24,9 +26,8 @@ class Controls {
                     this.reverse = true;
                     break;
             }
-            console.table(this);
         }
-
+        // Event listeners for a keyboard release
         document.onkeyup = (event) => {
             switch (event.key) {
                 case "ArrowLeft":
@@ -42,7 +43,6 @@ class Controls {
                     this.reverse = false;
                     break;
             }
-            console.table(this);
         }
     }
 
